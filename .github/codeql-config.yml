@@ -8,3 +8,9 @@ queries:
 paths-ignore:
   - tests
   - lib
+query-filters:
+  - include:
+      tags:
+        - "security"
+        - "maintainability"
+        - "readability"

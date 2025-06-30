@@ -18,4 +18,4 @@ from FuncDecl func, int paramCount
 where
   paramCount = func.getNumParameters() and
   paramCount > parameterThreshold
-select func, "Function has " + paramCount.toString() + " parameters, which is more than the recommended " + parameterThreshold.toString() + "."
+select func, "[CUSTOM_QUERY: go-too-many-parameters.ql] Function has " + paramCount.toString() + " parameters, which is more than the recommended " + parameterThreshold.toString() + "."

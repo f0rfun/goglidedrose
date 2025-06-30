@@ -2,7 +2,8 @@ name: CodeQL Analysis
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+    # Weekly on Sunday.
+    - cron: '30 1 * * 0'
   push:
     branches:
       - main
