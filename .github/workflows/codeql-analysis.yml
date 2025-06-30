@@ -25,16 +25,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Initialize the CodeQL toolkit for Go
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: go
 
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+        uses: github/codeql-action/autobuild@v3
         # For Go projects, autobuild typically works out of the box.
         # If needed, you can replace this with custom build commands.
 
       - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
         with:
           upload-sarif: true
