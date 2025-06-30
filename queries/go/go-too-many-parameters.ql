@@ -12,9 +12,9 @@
  import go
 
  // Define the parameter threshold
- parameterThreshold := 5;
+// # parameterThreshold := 5;
  
  from Function f
- where f.getNumberOfParameters() > parameterThreshold
- select f, "Function has more than " + string(parameterThreshold) + " parameters."
+ where f.getNumberOfParameters() > 5
+ select f, "Function has more than 5 parameters."
  
