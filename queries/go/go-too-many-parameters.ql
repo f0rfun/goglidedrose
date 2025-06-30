@@ -1,6 +1,6 @@
 /**
  * @name Function with too many parameters
- * @description Functions with too many parameters might be doing too much or might benefit from grouping parameters.
+ * @description Functions with more than 5 parameters might be doing too much or might benefit from refactoring.
  * @kind problem
  * @problem.severity warning
  * @precision medium
@@ -9,13 +9,11 @@
  *       readability
  */
 
-import go
+ import go
 
-// You can adjust this number based on your preferences
-int parameterThreshold = 5;
-
-from FuncDecl func, int paramCount
-where
-  paramCount = func.getNumParameters() and
-  paramCount > parameterThreshold
-select func, "[CUSTOM_QUERY: go-too-many-parameters.ql] Function has " + paramCount.toString() + " parameters, which is more than the recommended " + parameterThreshold.toString() + "."
+ // Define the parameter threshold
+ int parameterThreshold = 5;
+ 
+ from FuncDecl func
+ where func.getNumParameters() > parameterThreshold
+ select func, "Function has more than " + parameterThreshold.toString() + " parameters."
