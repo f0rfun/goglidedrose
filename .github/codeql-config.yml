@@ -16,13 +16,5 @@ query-filters:
         - "security"
         - "maintainability"
 
-query-suites:
-  - name: "go-security-and-quality"
-    queries:
-      - uses: github/codeql/go-queries@main
-      - uses: github/codeql/security-extended@main
-      - queries/go/deprecated.ql
-
 packs:
-  go:
-    - github/codeql/go-queries@main
+  - github/codeql/go-queries@main
