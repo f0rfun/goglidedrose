@@ -1,5 +1,5 @@
 name: my-go-analysis
 version: 1.0.0
 dependencies:
-  codeql/csharp-all: "*"
+  codeql/go: "*"
 extractor: go
