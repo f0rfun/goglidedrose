@@ -2,45 +2,56 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
-
-	"github.com/f0rfun/goglidedrose/glidedrose"
+	"time"
 )
 
+// LongFunction is a function that's excessively long.
+func LongFunction() {
+	fmt.Println("Start of long function")
+
+	// Many lines of code here...
+	fmt.Println("Doing something...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("Doing something else...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("And another thing...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("Yet another task...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("Still going...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("Almost done...")
+	time.Sleep(1 * time.Second)
+	fmt.Println("Finally finished.")
+
+	// Even more code...
+	x := 10
+	y := 5
+	result := x + y
+	fmt.Println("Result:", result)
+	// More calculations
+	a := 2
+	b := 3
+	c := a * b
+	fmt.Println("C:", c)
+	// And even more
+	d := 7
+	e := 1
+	f := d - e
+	fmt.Println("F:", f)
+
+	//And even more lines of code...
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+}
+
+// EmptyFunction is an empty function.
+func EmptyFunction() {
+	//This is an empty function
+}
+
 func main() {
-	fmt.Println("OMGHAI!")
-
-	var items = []*gildedrose.Item{
-		{"+5 Dexterity Vest", 10, 20},
-		{"Aged Brie", 2, 0},
-		{"Elixir of the Mongoose", 5, 7},
-		{"Sulfuras, Hand of Ragnaros", 0, 80},
-		{"Sulfuras, Hand of Ragnaros", -1, 80},
-		{"Backstage passes to a TAFKAL80ETC concert", 15, 20},
-		{"Backstage passes to a TAFKAL80ETC concert", 10, 49},
-		{"Backstage passes to a TAFKAL80ETC concert", 5, 49},
-		{"Conjured Mana Cake", 3, 6}, // <-- :O
-	}
-
-	days := 2
-	var err error
-	if len(os.Args) > 1 {
-		days, err = strconv.Atoi(os.Args[1])
-		if err != nil {
-			fmt.Println(err.Error())
-			os.Exit(1)
-		}
-		days++
-	}
-
-	for day := 0; day < days; day++ {
-		fmt.Printf("-------- day %d --------\n", day)
-		fmt.Println("Name, SellIn, Quality")
-		for i := 0; i < len(items); i++ {
-			fmt.Println(items[i])
-		}
-		fmt.Println("")
-		gildedrose.UpdateQuality(items)
-	}
+	LongFunction()
+	EmptyFunction() // Call the empty function
 }
