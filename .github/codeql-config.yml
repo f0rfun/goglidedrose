@@ -4,4 +4,4 @@ queries:
   - uses: security-and-quality
 
 packs:
-  - github/codeql/go-queries@main
+  - github/codeql/go-queries
