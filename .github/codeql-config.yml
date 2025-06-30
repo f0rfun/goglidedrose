@@ -1,20 +1,4 @@
-name: "Custom CodeQL Configuration for Go with Security and Path Exclusions"
-
+# Configuration for the CodeQL Actions Queries
+name: "CodeQL Actions Queries config"
 queries:
-  - uses: github/codeql/go-queries@main
-  - uses: github/codeql/security-extended@main
-
-paths-ignore:
-  - 'tests'
-  - 'vendor'
-  - 'docs'
-  - '**/generated'
-
-query-filters:
-  - include:
-      tags:
-        - "security"
-        - "maintainability"
-
-packs:
-  - github/codeql/go-queries@main
+  - uses: security-and-quality
