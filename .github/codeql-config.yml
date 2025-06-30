@@ -1,0 +1,12 @@
+# .github/codeql-config.yml
+
+name: "CodeQL Configuration"
+
+queries:
+  - uses: security-extended
+
+paths-ignore:
+  - path: /tests  # Exclude the 'tests' directory (optional)
+  - path: /vendor # Exclude the 'vendor' directory (optional)
+
+disable-default-queries: false # Ensure default security queries are also run
