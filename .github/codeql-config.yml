@@ -13,7 +13,7 @@ excludes:
 
 queries:
   # You can specify additional custom queries here
-  - uses: queries/go/custom-quality-queries
+  - uses: queries/go/deprecated.ql
   - query: "@codeql/go/security"   # Standard security checks
 
 # Optional: You can override or add more specific queries
