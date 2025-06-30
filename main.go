@@ -6,7 +6,7 @@ import (
 )
 
 // LongFunction is a function that's excessively long.
-func LongFunction(a, b, c, d, e int) {
+func LongFunction(a, b, c, d, e, f int) {
 	fmt.Println("Start of long function")
 
 	// Many lines of code here...
