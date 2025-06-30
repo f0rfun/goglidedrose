@@ -15,5 +15,6 @@
  int parameterThreshold = 5;
  
  from Function f
- where func.getNumParameters() > parameterThreshold
+ where f.getNumberOfParameters() > parameterThreshold
  select f, "Function has more than " + parameterThreshold.toString() + " parameters."
+ 
