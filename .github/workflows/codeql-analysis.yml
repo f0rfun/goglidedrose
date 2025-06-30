@@ -37,5 +37,5 @@ jobs:
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
         with:
-          upload-sarif: true #SARIF files allows you to view code scanning alerts from third-party static analysis tools directly within your GitHub repository.
+          upload: true #SARIF files allows you to view code scanning alerts from third-party static analysis tools directly within your GitHub repository.
           category: "/language:go" #category is used to distinguish results for different languages.
