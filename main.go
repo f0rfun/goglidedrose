@@ -30,14 +30,14 @@ func LongFunction(a, b, c, d, e, f int) {
 	result := x + y
 	fmt.Println("Result:", result)
 	// More calculations
-	a := 2
-	b := 3
-	c := a * b
+	a = 2
+	b = 3
+	c = a * b
 	fmt.Println("C:", c)
 	// And even more
-	d := 7
-	e := 1
-	f := d - e
+	d = 7
+	e = 1
+	f = d - e
 	fmt.Println("F:", f)
 
 	//And even more lines of code...
@@ -52,6 +52,6 @@ func EmptyFunction() {
 }
 
 func main() {
-	LongFunction()
+	LongFunction(1, 2, 3, 4, 5, 6)
 	EmptyFunction() // Call the empty function
 }
