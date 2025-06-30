@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Initialize the CodeQL toolkit for Go
         uses: github/codeql-action/init@v3
@@ -37,4 +37,5 @@ jobs:
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
         with:
-          upload-sarif: true
+          upload-sarif: true #SARIF files allows you to view code scanning alerts from third-party static analysis tools directly within your GitHub repository.
+          category: "/language:go" #category is used to distinguish results for different languages.
