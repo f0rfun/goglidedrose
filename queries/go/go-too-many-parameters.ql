@@ -11,6 +11,8 @@
 
 import go
 
+println("[RUNNING CUSTOM QUERY: go-too-many-parameters.ql]");
+
 // You can adjust this number based on your preferences
 int parameterThreshold = 5;
 

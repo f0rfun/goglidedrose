@@ -1,13 +1,13 @@
 # Configuration for the CodeQL Actions Queries
 name: "CodeQL Actions Queries config"
 queries:
-  - name: Run custom queries
-    uses: ./queries/go
+  - uses: ./queries/go
   - uses: security-and-quality
   - uses: security-extended
-paths-ignore:
-  - tests
-  - lib
+# * Go does not support path-based filtering. The `paths` and `paths-ignore` configuration properties will have no effect for this language. 
+# paths-ignore:
+#  - tests
+#  - lib
 query-filters:
   - include:
       tags:
