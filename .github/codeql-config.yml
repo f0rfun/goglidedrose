@@ -1,10 +1,9 @@
 name: "Custom CodeQL Configuration for Go with Security and Path Exclusions"
 
-packs:
+uses:
   - github/codeql/go-queries
   - github/codeql/security-extended  # Include extended security queries
 
-# Exclude certain paths from analysis using the 'excludes' list
 excludes:
   - 'tests/**'             # Ignore all files in the 'tests' directory
   - 'vendor/**'            # Ignore external/vendor code
@@ -13,8 +12,8 @@ excludes:
 
 queries:
   # You can specify additional custom queries here
-  - uses: queries/go/deprecated.ql
-  - query: "@codeql/go/security"   # Standard security checks
+  - queries/go/deprecated.ql
+  - "@codeql/go/security"   # Standard security checks
 
-# Optional: You can override or add more specific queries
-# For example, custom security checks can be added here
+packs:
+  - github/codeql/go-queries
