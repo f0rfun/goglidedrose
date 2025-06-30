@@ -1,5 +1,4 @@
 name: my-go-analysis
 version: 1.0.0
-dependencies:
-  queries/go: "*"
-extractor: go
+libraryPathDependencies: codeql-go
+queries: .
